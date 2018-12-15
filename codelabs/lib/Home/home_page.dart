@@ -16,12 +16,7 @@ class Home extends StatelessWidget {
               print('select index -- $index');
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) {
-                    return new Scaffold(
-                      appBar: AppBar(
-                        title: Text(titles[index]),
-                      ),
-                      body: new TextFieldPage(),
-                    );
+                    return new TextFieldPage();
                   })
               );
             });
