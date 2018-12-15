@@ -11,6 +11,16 @@ class _TextFieldFocusState extends State<TextFieldFocusPage> {
   FocusScopeNode focusScopeNode;
 
   @override
+    void initState() {
+      super.initState();
+
+      // 监听焦点变化
+      focusNode1.addListener((){
+        print(focusNode1.hasFocus ? '获取焦点' : '失去焦点');
+      });
+    }
+
+  @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
