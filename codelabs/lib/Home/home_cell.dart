@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class HomeCell extends StatelessWidget {
+  final title;
+  HomeCell(this.title);
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +12,7 @@ class HomeCell extends StatelessWidget {
           child: new Row(
             children: <Widget>[
               new Text(
-                'TextField',
+                title,
                 style: TextStyle(
                     fontSize: 16.0,
                     fontWeight:
