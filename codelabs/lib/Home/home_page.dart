@@ -10,9 +10,14 @@ class Home extends StatelessWidget {
     "FlexExpanded",
     "Wrap",
     "Flow",
-    "Stack"
+    "Stack",
+    "Padding",
+    "Box",
+    "DecoratedBox",
+    "Transform",
+    "Container"
   ];
-  
+
   @override
   Widget build(BuildContext context) {
     return new ListView.builder(
