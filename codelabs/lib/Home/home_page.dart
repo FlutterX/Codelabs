@@ -5,7 +5,12 @@ import 'package:codelabs/Router/router_define_handler.dart';
 class Home extends StatelessWidget {
   final titles = [
     "TextField",
-    "Form"
+    "Form",
+    "RowColumn",
+    "FlexExpanded",
+    "Wrap",
+    "Flow",
+    "Stack"
   ];
   
   @override
