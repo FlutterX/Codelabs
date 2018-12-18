@@ -11,6 +11,10 @@ import 'package:codelabs/Layout/Container/box_page.dart';
 import 'package:codelabs/Layout/Container/decoratedBox_page.dart';
 import 'package:codelabs/Layout/Container/transform_page.dart';
 import 'package:codelabs/Layout/Container/container_page.dart';
+import 'package:codelabs/Scroll/SingleChildScrollView/singleChild_scrollView_page.dart';
+import 'package:codelabs/Scroll/ListView/listView_page.dart';
+import 'package:codelabs/Scroll/GridView/gridView_page.dart';
+import 'package:codelabs/Scroll/CustomScrollView/customScrollView_page.dart';
 
 class RouterDefineHandler {
   static final scheme = 'lxfapp';
@@ -21,6 +25,7 @@ class RouterDefineHandler {
   }
 
   void _register() {
+    // Basic
     router.define(fetchRoute('TextField'),
         handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
       return TextFieldPage();
@@ -31,6 +36,7 @@ class RouterDefineHandler {
       return FormPage();
     }));
 
+    // Layout
     router.define(fetchRoute('RowColumn'),
         handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
       return RowColumnPage();
@@ -79,6 +85,27 @@ class RouterDefineHandler {
     router.define(fetchRoute('Container'),
         handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
       return ContainerPage();
+    }));
+
+    // Scroll
+    router.define(fetchRoute('SingleChildScrollView'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return SingleChildScrollViewPage();
+    }));
+
+    router.define(fetchRoute('ListView'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return ListViewPage();
+    }));
+
+    router.define(fetchRoute('GridView'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return GridViewPage();
+    }));
+
+    router.define(fetchRoute('CustomScrollView'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return CustomScrollViewPage();
     }));
   }
 
