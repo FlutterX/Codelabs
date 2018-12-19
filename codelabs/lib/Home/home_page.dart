@@ -28,7 +28,12 @@ class Home extends StatelessWidget {
     // Functional
     "WillPopScope",
     "InheritedWidget",
-    "ThemeData"
+    "ThemeData",
+    // Event
+    "Pointer",
+    "GestureDetector",
+    "Event",
+    "Notification"
   ];
 
   @override
