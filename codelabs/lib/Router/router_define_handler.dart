@@ -20,6 +20,10 @@ import 'package:codelabs/Scroll/NotificationListener/notificationListener_page.d
 import 'package:codelabs/Functional/willPopScope_page.dart';
 import 'package:codelabs/Functional/inheritedWidget_page.dart';
 import 'package:codelabs/Functional/themeData_page.dart';
+import 'package:codelabs/Event/pointer_page.dart';
+import 'package:codelabs/Event/gestureDetector_page.dart';
+import 'package:codelabs/Event/event_page.dart';
+import 'package:codelabs/Event/notification_page.dart';
 
 class RouterDefineHandler {
   static final scheme = 'lxfapp';
@@ -137,6 +141,27 @@ class RouterDefineHandler {
     router.define(fetchRoute('ThemeData'),
         handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
       return ThemeDataPage();
+    }));
+
+    // Event 
+    router.define(fetchRoute('Pointer'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return PointerPage();
+    }));
+
+    router.define(fetchRoute('GestureDetector'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return GestureDetectorPage();
+    }));
+
+    router.define(fetchRoute('Event'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return EventAPage();
+    }));
+
+    router.define(fetchRoute('Notification'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return NotificationPage();
     }));
   }
 
