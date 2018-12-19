@@ -15,6 +15,11 @@ import 'package:codelabs/Scroll/SingleChildScrollView/singleChild_scrollView_pag
 import 'package:codelabs/Scroll/ListView/listView_page.dart';
 import 'package:codelabs/Scroll/GridView/gridView_page.dart';
 import 'package:codelabs/Scroll/CustomScrollView/customScrollView_page.dart';
+import 'package:codelabs/Scroll/ScrollController/scrollController_page.dart';
+import 'package:codelabs/Scroll/NotificationListener/notificationListener_page.dart';
+import 'package:codelabs/Functional/willPopScope_page.dart';
+import 'package:codelabs/Functional/inheritedWidget_page.dart';
+import 'package:codelabs/Functional/themeData_page.dart';
 
 class RouterDefineHandler {
   static final scheme = 'lxfapp';
@@ -106,6 +111,32 @@ class RouterDefineHandler {
     router.define(fetchRoute('CustomScrollView'),
         handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
       return CustomScrollViewPage();
+    }));
+
+    router.define(fetchRoute('ScrollController'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return ScrollControllerPage();
+    }));
+
+    router.define(fetchRoute('NotificationListener'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return NotificationListenerPage();
+    }));
+
+    // Functional
+    router.define(fetchRoute('WillPopScope'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return WillPopScopePage();
+    }));
+
+    router.define(fetchRoute('InheritedWidget'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return InheritedWidgetPage();
+    }));
+
+    router.define(fetchRoute('ThemeData'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return ThemeDataPage();
     }));
   }
 
