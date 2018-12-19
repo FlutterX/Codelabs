@@ -22,7 +22,13 @@ class Home extends StatelessWidget {
     "SingleChildScrollView",
     "ListView",
     "GridView",
-    "CustomScrollView"
+    "CustomScrollView",
+    "ScrollController",
+    "NotificationListener",
+    // Functional
+    "WillPopScope",
+    "InheritedWidget",
+    "ThemeData"
   ];
 
   @override
