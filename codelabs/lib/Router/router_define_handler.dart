@@ -24,6 +24,9 @@ import 'package:codelabs/Event/pointer_page.dart';
 import 'package:codelabs/Event/gestureDetector_page.dart';
 import 'package:codelabs/Event/event_page.dart';
 import 'package:codelabs/Event/notification_page.dart';
+import 'package:codelabs/Animation/Struct/scaleAnimation_page.dart';
+import 'package:codelabs/Animation/Struct/animatedWidget_page.dart';
+import 'package:codelabs/Animation/Struct/animatedBuilder_page.dart';
 
 class RouterDefineHandler {
   static final scheme = 'lxfapp';
@@ -162,6 +165,22 @@ class RouterDefineHandler {
     router.define(fetchRoute('Notification'),
         handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
       return NotificationPage();
+    }));
+
+    // Animation
+    router.define(fetchRoute('ScaleAnimation'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return ScaleAnimationPage();
+    }));
+
+    router.define(fetchRoute('AnimatedWidget'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return AnimatedWidgetPage();
+    }));
+
+    router.define(fetchRoute('AnimatedBuilder'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return AnimatedBuilderPage();
     }));
   }
 
