@@ -33,7 +33,11 @@ class Home extends StatelessWidget {
     "Pointer",
     "GestureDetector",
     "Event",
-    "Notification"
+    "Notification",
+    // Animation
+    "ScaleAnimation",
+    "AnimatedWidget",
+    "AnimatedBuilder"
   ];
 
   @override
