@@ -27,6 +27,13 @@ import 'package:codelabs/Event/notification_page.dart';
 import 'package:codelabs/Animation/Struct/scaleAnimation_page.dart';
 import 'package:codelabs/Animation/Struct/animatedWidget_page.dart';
 import 'package:codelabs/Animation/Struct/animatedBuilder_page.dart';
+import 'package:codelabs/Animation/route_transition_page.dart';
+import 'package:codelabs/Animation/hero_page.dart';
+import 'package:codelabs/Animation/staggerAnimation_page.dart';
+import 'package:codelabs/DIYWidget/gradientButton_page.dart';
+import 'package:codelabs/DIYWidget/turnBox_page.dart';
+import 'package:codelabs/DIYWidget/customPaint_page.dart';
+import 'package:codelabs/DIYWidget/gradientCircularProgressIndicator_page.dart';
 
 class RouterDefineHandler {
   static final scheme = 'lxfapp';
@@ -182,6 +189,43 @@ class RouterDefineHandler {
         handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
       return AnimatedBuilderPage();
     }));
+
+    router.define(fetchRoute('RouteTransition'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return RouteTransitionPage();
+    }));
+
+    router.define(fetchRoute('Hero'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return HeroPage();
+    }));
+
+    router.define(fetchRoute('StaggerAnimation'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return StaggerAnimationPage();
+    }));
+
+    // DIYWidget 
+    router.define(fetchRoute('GradientButton'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return GradientButtonPage();
+    }));
+
+    router.define(fetchRoute('TurnBox'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return TurnBoxPage();
+    }));
+
+    router.define(fetchRoute('CustomPaint'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return CustomPaintPage();
+    }));
+
+    router.define(fetchRoute('GradientCircularProgressIndicator'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return GradientCircularProgressPage();
+    }));
+
   }
 
   static String fetchRoute(String path) {
