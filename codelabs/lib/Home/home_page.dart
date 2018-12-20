@@ -37,7 +37,15 @@ class Home extends StatelessWidget {
     // Animation
     "ScaleAnimation",
     "AnimatedWidget",
-    "AnimatedBuilder"
+    "AnimatedBuilder",
+    "RouteTransition",
+    "Hero",
+    "StaggerAnimation",
+    // DIYWidget
+    "GradientButton",
+    "TurnBox",
+    "CustomPaint",
+    "GradientCircularProgressIndicator"
   ];
 
   @override
