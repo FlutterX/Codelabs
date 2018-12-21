@@ -34,6 +34,8 @@ import 'package:codelabs/DIYWidget/gradientButton_page.dart';
 import 'package:codelabs/DIYWidget/turnBox_page.dart';
 import 'package:codelabs/DIYWidget/customPaint_page.dart';
 import 'package:codelabs/DIYWidget/gradientCircularProgressIndicator_page.dart';
+import 'package:codelabs/IO/fileOperation_page.dart';
+import 'package:codelabs/IO/http_client.dart';
 
 class RouterDefineHandler {
   static final scheme = 'lxfapp';
@@ -226,6 +228,17 @@ class RouterDefineHandler {
       return GradientCircularProgressPage();
     }));
 
+    // IO
+    router.define(fetchRoute('FileOperation'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return FileOperationPage();
+    }));
+
+    router.define(fetchRoute('HttpClient'),
+        handler: Handler(handlerFunc: (context, Map<String, dynamic> params) {
+      return HttpClientPage();
+    }));
+    
   }
 
   static String fetchRoute(String path) {
