@@ -45,7 +45,10 @@ class Home extends StatelessWidget {
     "GradientButton",
     "TurnBox",
     "CustomPaint",
-    "GradientCircularProgressIndicator"
+    "GradientCircularProgressIndicator",
+    // IO
+    "FileOperation",
+    "HttpClient"
   ];
 
   @override
